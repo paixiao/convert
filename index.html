@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="container-1">
+            <h1>Conversion Calculator</h1>
+            <p>Easy and simple to use conversion calculator to go from kilograms to pounds</p>
+        </div>
+
+        <hr>
+        
+        <div class="container-2">
+            <form class="form">
+                <input id="kgNum" type="text" class="form-control" placeholder="kg">
+                <button id="button" type="button" class="form-button">Convert</button>
+            </form>
+            <div id="result" class="answer-box">Conversion: </div>
+            <script>        
+                //function to convert input value
+                document.getElementById("button").addEventListener("click", 
+                function convert() {
+                    var kilos= document.getElementById("kgNum").value;
+                    var denom = 0.4536;
+                    var pounds =  parseFloat(kilos) / denom;
+                    //Display the converted input to values chosen by the user!
+                    document.getElementById("result").innerHTML = `Conversion: ${kilos} kg is  ${pounds.toFixed(2)} lbs.`;
+
+                    document.getElementById("kgNum").value = "";
+                    
+                })
+            </script>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

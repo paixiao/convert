@@ -1,0 +1,30 @@
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 {
+    display: grid;
+    justify-content: center;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 12px;
+    padding:10px;
+    background-color: black;
+}
+
+.answer-box {
+    border-style: inset;
+    font-size: medium;
+    background-color: aquamarine;
+    margin-top: 9.75px;
+    margin-left: 10px;
+    width: 30%;
+}
+
+body {
+    font-size:x-large
+}
