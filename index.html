@@ -18,13 +18,18 @@
         
         <div class="container-2">
             <form class="form">
-                <input id="kgNum" type="text" class="form-control" placeholder="kg">
-                <button id="button" type="button" class="form-button">Convert</button>
+                <input id="kgNum" type="text" class="form-control" placeholder="kg to lbs.">
+                <button id="button1" type="button" class="form-button">Convert</button>
+                
+                <!--12/15/2022 Added pound to kg conversion --> 
+                <input id="lbNum" type="text" class="form-control" placeholder="lbs to kg"
+                <button id="button2" type="button" class="form-control">Convert</button>
             </form>
             <div id="result" class="answer-box">Conversion: </div>
+            <div id="result_2" class="answer-box">Conversion: </div>
             <script>        
-                //function to convert input value
-                document.getElementById("button").addEventListener("click", 
+                //function to convert input value(kg to pounds)
+                document.getElementById("button1").addEventListener("click", 
                 function convert() {
                     var kilos= document.getElementById("kgNum").value;
                     var denom = 0.4536;
@@ -34,6 +39,19 @@
 
                     document.getElementById("kgNum").value = "";
                     
+                })
+
+                //function to convert input value(lbs. to kg)
+                document.getElementById("button2").addEventListener("click", 
+                function convert_2() {
+                    var pounds = document.getElementById("lbNum").value;
+                    var denom = 2.205;
+                    var kilos = parseFloat(pounds) / denom;
+                    
+                    //display the converted kilos
+                    document.getElementById("result").innerHTML = `Conversion: ${pounds} lbs is ${kilos.toFixed(2)} kg.`
+
+                    document.getElementById("lbNum").value = "";
                 })
             </script>
         </div>
