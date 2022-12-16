@@ -31,9 +31,9 @@
                 //function to convert input value(kg to pounds)
                 document.getElementById("button1").addEventListener("click", 
                 function convert() {
-                    var kilos= document.getElementById("kgNum").value;
-                    var denom = 0.4536;
-                    var pounds =  parseFloat(kilos) / denom;
+                    let kilos= document.getElementById("kgNum").value;
+                    let denom = 0.4536;
+                    let pounds =  parseFloat(kilos) / denom;
                     //Display the converted input to values chosen by the user!
                     document.getElementById("result").innerHTML = `Conversion: ${kilos} kg is  ${pounds.toFixed(2)} lbs.`;
 
@@ -44,9 +44,9 @@
                 //function to convert input value(lbs. to kg)
                 document.getElementById("button2").addEventListener("click", 
                 function convert_2() {
-                    var pounds = document.getElementById("lbNum").value;
-                    var denom = 2.205;
-                    var kilos = parseFloat(pounds) / denom;
+                    let pounds = document.getElementById("lbNum").value;
+                    let denom = 2.205;
+                    let kilos = parseFloat(pounds) / denom;
                     
                     //display the converted kilos
                     document.getElementById("result").innerHTML = `Conversion: ${pounds} lbs is ${kilos.toFixed(2)} kg.`
